@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tijaabo4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN / REGISTER -->
+<div id="authSection" class="auth-container">
+  <h2>Tijaabo4</h2>
+
+  <form id="loginForm">
+    <h3>Login</h3>
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <form id="registerForm">
+    <h3>Register</h3>
+    <input type="email" id="regEmail" placeholder="Email (Gmail)" required>
+    <input type="text" id="regPhone" placeholder="Phone" required>
+    <input type="password" id="regPassword" placeholder="Password" required>
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+<!-- HOME PAGE -->
+<div id="homePage" class="hidden">
+  <header>
+    <h1>Ku Soo Dhawoow Tijaabo4</h1>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="slider">
+      <img id="sliderImage" src="https://picsum.photos/800/400?1">
+    </div>
+
+    <div class="video-box">
+      <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button>Send</button>
+    </form>
+  </section>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminPanel" class="hidden">
+  <h2>Admin Panel (HG)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Password</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="userTable"></tbody>
+  </table>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
